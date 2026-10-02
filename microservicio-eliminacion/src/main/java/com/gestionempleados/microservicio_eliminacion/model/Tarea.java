@@ -19,17 +19,25 @@ public class Tarea {
     private String titulo;
 
     @Column(nullable = false)
+    private String descripcion;
+
+    @Column(nullable = false)
     private String estado;
 
     @Column(name = "empleado_id")
     private Long empleadoId;
 
     protected Tarea() {
-        // Requerido por JPA.
     }
 
-    public Tarea(String titulo, String estado, Long empleadoId) {
+    public Tarea(
+            String titulo,
+            String descripcion,
+            String estado,
+            Long empleadoId) {
+
         this.titulo = titulo;
+        this.descripcion = descripcion;
         this.estado = estado;
         this.empleadoId = empleadoId;
     }
@@ -44,6 +52,14 @@ public class Tarea {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getEstado() {

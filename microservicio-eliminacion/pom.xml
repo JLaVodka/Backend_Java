@@ -50,7 +50,10 @@
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                <mainClass>com.gestionempleados.microservicio_eliminacion.MicroservicioEliminacionApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
